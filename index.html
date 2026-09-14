@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Hot Rodz Outdoor Services, LLC provides mowing, lawn care, land clearing, mulch, leaf removal, snow removal and property cleanup across Livingston, Grundy, Daviess and DeKalb counties in Missouri.">
+  <title>Hot Rodz Outdoor Services, LLC | North Missouri Outdoor Services</title>
+
+  <style>
+    :root{
+      --black:#0b0b0b;
+      --charcoal:#171717;
+      --card:#202020;
+      --yellow:#ffd400;
+      --yellow2:#ffb900;
+      --white:#ffffff;
+      --muted:#c9c9c9;
+      --line:#393939;
+      --max:1120px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      background:var(--black);
+      color:var(--white);
+      font-family:Arial,Helvetica,sans-serif;
+      line-height:1.55;
+    }
+
+    a{color:inherit}
+    .wrap{width:min(var(--max),calc(100% - 36px));margin:auto}
+
+    .topbar{
+      background:var(--yellow);
+      color:#000;
+      font-weight:800;
+      text-align:center;
+      padding:9px 16px;
+      letter-spacing:.2px;
+    }
+
+    header{
+      position:sticky;
+      top:0;
+      z-index:20;
+      background:rgba(11,11,11,.96);
+      border-bottom:1px solid var(--line);
+      backdrop-filter:blur(8px);
+    }
+
+    nav{
+      min-height:72px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    .brand{
+      text-decoration:none;
+      font-size:clamp(1.15rem,3vw,1.55rem);
+      font-weight:1000;
+      letter-spacing:-.7px;
+      white-space:nowrap;
+    }
+
+    .brand strong{color:var(--yellow)}
+    .navlinks{display:flex;gap:22px;align-items:center}
+    .navlinks a{
+      text-decoration:none;
+      color:#e9e9e9;
+      font-weight:700;
+      font-size:.95rem;
+    }
+    .navlinks a:hover{color:var(--yellow)}
+
+    .btn{
+      display:inline-block;
+      border:0;
+      border-radius:8px;
+      padding:14px 20px;
+      text-decoration:none;
+      font-weight:900;
+      cursor:pointer;
+      transition:.18s ease;
+    }
+    .btn-primary{
+      background:var(--yellow);
+      color:#000;
+      box-shadow:0 6px 0 #9f8500;
+    }
+    .btn-primary:hover{transform:translateY(-2px);background:#ffe04d}
+    .btn-dark{
+      background:#252525;
+      color:#fff;
+      border:1px solid #4a4a4a;
+    }
+
+    .hero{
+      background:
+        radial-gradient(circle at 78% 22%, rgba(255,212,0,.22), transparent 28rem),
+        linear-gradient(135deg,#080808 0%,#151515 60%,#0b0b0b 100%);
+      border-bottom:1px solid var(--line);
+      overflow:hidden;
+    }
+
+    .hero-grid{
+      min-height:610px;
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      align-items:center;
+      gap:56px;
+      padding:74px 0;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      color:var(--yellow);
+      font-weight:900;
+      text-transform:uppercase;
+      letter-spacing:1.5px;
+      font-size:.82rem;
+    }
+
+    h1{
+      margin:12px 0 18px;
+      font-size:clamp(3rem,7vw,6.1rem);
+      line-height:.92;
+      letter-spacing:-4px;
+      text-transform:uppercase;
+    }
+    h1 span{color:var(--yellow)}
+    .lead{
+      max-width:700px;
+      color:#e1e1e1;
+      font-size:clamp(1.05rem,2vw,1.25rem);
+      margin:0 0 28px;
+    }
+    .actions{display:flex;flex-wrap:wrap;gap:14px}
+
+    .hero-card{
+      background:linear-gradient(160deg,#202020,#101010);
+      border:1px solid #414141;
+      border-radius:18px;
+      padding:30px;
+      box-shadow:0 30px 80px rgba(0,0,0,.45);
+      position:relative;
+    }
+    .hero-card:before{
+      content:"";
+      position:absolute;
+      width:120px;height:8px;
+      top:-1px;left:30px;
+      background:var(--yellow);
+      border-radius:0 0 8px 8px;
+    }
+
+    .horsepower{
+      font-size:4rem;
+      line-height:1;
+      margin:8px 0 6px;
+    }
+
+    .hero-card h2{
+      margin:10px 0 6px;
+      text-transform:uppercase;
+      font-size:2rem;
+      letter-spacing:-1px;
+    }
+    .hero-card p{color:var(--muted);margin:0 0 22px}
+    .quicklist{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:10px;
+    }
+    .quicklist div{
+      border:1px solid #3a3a3a;
+      background:#151515;
+      border-radius:9px;
+      padding:11px;
+      font-weight:800;
+      font-size:.92rem;
+    }
+
+    section{padding:82px 0}
+    .section-kicker{
+      color:var(--yellow);
+      text-transform:uppercase;
+      font-weight:900;
+      letter-spacing:1.5px;
+      font-size:.8rem;
+    }
+    .section-title{
+      margin:5px 0 16px;
+      font-size:clamp(2rem,4.5vw,3.4rem);
+      line-height:1.05;
+      letter-spacing:-2px;
+      text-transform:uppercase;
+    }
+    .section-copy{max-width:760px;color:var(--muted);margin-bottom:34px}
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+    }
+    .card{
+      background:var(--charcoal);
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:25px;
+    }
+    .card .icon{font-size:2rem;margin-bottom:10px}
+    .card h3{margin:0 0 8px;font-size:1.18rem}
+    .card p{margin:0;color:var(--muted)}
+
+    .light{
+      background:#f2f2f2;
+      color:#111;
+    }
+    .light .section-copy{color:#555}
+    .county-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:14px;
+    }
+    .county{
+      background:#fff;
+      border:2px solid #171717;
+      border-radius:12px;
+      padding:25px 18px;
+      text-align:center;
+      font-size:1.14rem;
+      font-weight:1000;
+      text-transform:uppercase;
+      box-shadow:6px 6px 0 var(--yellow);
+    }
+
+    .why-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:46px;
+      align-items:center;
+    }
+    .why-list{
+      display:grid;
+      gap:13px;
+    }
+    .why-item{
+      display:flex;
+      gap:13px;
+      padding:17px;
+      background:#151515;
+      border:1px solid var(--line);
+      border-radius:10px;
+    }
+    .check{
+      min-width:28px;height:28px;
+      border-radius:50%;
+      background:var(--yellow);
+      color:#000;
+      font-weight:1000;
+      display:grid;
+      place-items:center;
+    }
+    .why-item strong{display:block;margin-bottom:2px}
+    .why-item span{color:var(--muted);font-size:.95rem}
+
+    .quote{
+      background:linear-gradient(135deg,var(--yellow),var(--yellow2));
+      color:#000;
+      padding:72px 0;
+    }
+    .quote-grid{
+      display:grid;
+      grid-template-columns:1fr auto;
+      gap:35px;
+      align-items:center;
+    }
+    .quote h2{
+      margin:0 0 8px;
+      font-size:clamp(2rem,5vw,4rem);
+      line-height:1;
+      text-transform:uppercase;
+      letter-spacing:-2px;
+    }
+    .quote p{margin:0;font-size:1.08rem;font-weight:700}
+    .quote .btn-dark{
+      background:#111;
+      border-color:#111;
+      padding:16px 24px;
+    }
+
+    footer{
+      padding:40px 0;
+      background:#080808;
+      border-top:1px solid var(--line);
+    }
+    .footer-grid{
+      display:grid;
+      grid-template-columns:1fr auto;
+      align-items:center;
+      gap:25px;
+    }
+    .footer-brand{font-weight:1000;font-size:1.12rem}
+    .footer-brand strong{color:var(--yellow)}
+    .footer-small{color:#969696;font-size:.88rem;margin-top:4px}
+    .contact-links{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:flex-end;
+      gap:12px 20px;
+      font-weight:800;
+    }
+    .contact-links a{text-decoration:none}
+    .contact-links a:hover{color:var(--yellow)}
+
+    @media(max-width:860px){
+      .navlinks a:not(.btn){display:none}
+      .hero-grid,.why-grid,.quote-grid{grid-template-columns:1fr}
+      .hero-grid{min-height:auto;padding:58px 0}
+      h1{letter-spacing:-2px}
+      .cards{grid-template-columns:1fr 1fr}
+      .county-grid{grid-template-columns:1fr 1fr}
+      .quote-grid{text-align:left}
+      .footer-grid{grid-template-columns:1fr}
+      .contact-links{justify-content:flex-start}
+    }
+
+    @media(max-width:560px){
+      .wrap{width:min(var(--max),calc(100% - 28px))}
+      nav{min-height:64px}
+      .brand{white-space:normal;line-height:1.05}
+      .navlinks .btn{padding:10px 12px;font-size:.86rem}
+      .cards,.county-grid,.quicklist{grid-template-columns:1fr}
+      section{padding:64px 0}
+      .hero-card{padding:24px}
+      .actions .btn{width:100%;text-align:center}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">Veteran Owned • Residential & Commercial • North Missouri</div>
+
+  <header>
+    <div class="wrap">
+      <nav>
+        <a class="brand" href="#top"><strong>HOT RODZ</strong> OUTDOOR SERVICES</a>
+        <div class="navlinks">
+          <a href="#services">Services</a>
+          <a href="#area">Service Area</a>
+          <a href="#about">Why Hot Rodz</a>
+          <a class="btn btn-primary" href="tel:+16609737564">Call 660-973-7564</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">★ Veteran Owned • Local Service</div>
+          <h1>Lawn Care With <span>Horse Power.</span></h1>
+          <p class="lead">
+            Reliable outdoor property services for homes and businesses across Livingston,
+            Grundy, Daviess and DeKalb counties. From mowing season to snow season,
+            Hot Rodz keeps your property handled.
+          </p>
+          <div class="actions">
+            <a class="btn btn-primary" href="tel:+16609737564">Call for a Free Quote</a>
+            <a class="btn btn-dark" href="mailto:admin@hotrodzoutdoors.com?subject=Quote%20Request%20-%20Hot%20Rodz%20Outdoor%20Services">Email Us</a>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Popular services">
+          <div class="horsepower">🏁</div>
+          <h2>Built to Work.</h2>
+          <p>Seasonal property care without the runaround.</p>
+          <div class="quicklist">
+            <div>✓ Mowing</div>
+            <div>✓ Lawn Care</div>
+            <div>✓ Land Clearing</div>
+            <div>✓ Brush Cleanup</div>
+            <div>✓ Mulch</div>
+            <div>✓ Leaf Removal</div>
+            <div>✓ Snow Removal</div>
+            <div>✓ Property Cleanups</div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="wrap">
+        <div class="section-kicker">What We Do</div>
+        <h2 class="section-title">Outdoor Services That Get It Done</h2>
+        <p class="section-copy">
+          Residential or commercial, one-time job or recurring service. If your property
+          needs attention outside, give us a call and tell us what you've got.
+        </p>
+
+        <div class="cards">
+          <article class="card">
+            <div class="icon">🌱</div>
+            <h3>Mowing & Lawn Care</h3>
+            <p>Routine mowing, trimming, edging and dependable seasonal lawn upkeep.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon">🌳</div>
+            <h3>Land & Brush Clearing</h3>
+            <p>Overgrown areas, brush cleanup and general property clearing.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon">🪵</div>
+            <h3>Mulch & Bed Refresh</h3>
+            <p>Mulch delivery, spreading and cleanup to freshen up beds and outdoor areas.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon">🍂</div>
+            <h3>Leaf & Seasonal Cleanup</h3>
+            <p>Leaves, yard debris and seasonal cleanup when your property needs a reset.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon">❄️</div>
+            <h3>Snow Removal</h3>
+            <p>Winter service for driveways, lots and other accessible areas.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon">🛠️</div>
+            <h3>Other Outdoor Jobs</h3>
+            <p>Have a property job that doesn't fit neatly in a box? Call and ask. If we can do it, we'll tell you.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="light" id="area">
+      <div class="wrap">
+        <div class="section-kicker">Service Area</div>
+        <h2 class="section-title">Serving Four North Missouri Counties</h2>
+        <p class="section-copy">
+          Based in the Chillicothe area and serving customers throughout the following counties.
+          Contact us to confirm service availability for your specific property.
+        </p>
+
+        <div class="county-grid">
+          <div class="county">Livingston County</div>
+          <div class="county">Grundy County</div>
+          <div class="county">Daviess County</div>
+          <div class="county">DeKalb County</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="wrap why-grid">
+        <div>
+          <div class="section-kicker">Why Hot Rodz</div>
+          <h2 class="section-title">Local. Reliable. Ready to Work.</h2>
+          <p class="section-copy">
+            Hot Rodz Outdoor Services, LLC is a veteran-owned North Missouri business focused on
+            dependable work, straightforward communication and taking care of the property in front of us.
+          </p>
+          <a class="btn btn-primary" href="tel:+16609737564">Talk to Hot Rodz</a>
+        </div>
+
+        <div class="why-list">
+          <div class="why-item">
+            <div class="check">✓</div>
+            <div><strong>Veteran Owned</strong><span>Locally operated with pride in the work.</span></div>
+          </div>
+          <div class="why-item">
+            <div class="check">✓</div>
+            <div><strong>Residential & Commercial</strong><span>Property care for homeowners and businesses.</span></div>
+          </div>
+          <div class="why-item">
+            <div class="check">✓</div>
+            <div><strong>Season-to-Season Service</strong><span>Grass, leaves, cleanup and snow—not just one season.</span></div>
+          </div>
+          <div class="why-item">
+            <div class="check">✓</div>
+            <div><strong>Free Quotes</strong><span>Call or email with the job and location to get started.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote" id="contact">
+      <div class="wrap quote-grid">
+        <div>
+          <h2>Need the Property Handled?</h2>
+          <p>Call Hot Rodz Outdoor Services for a free quote.</p>
+        </div>
+        <a class="btn btn-dark" href="tel:+16609737564">📞 660-973-7564</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-grid">
+      <div>
+        <div class="footer-brand"><strong>HOT RODZ</strong> OUTDOOR SERVICES, LLC</div>
+        <div class="footer-small">Serving Livingston, Grundy, Daviess & DeKalb counties in Missouri.</div>
+      </div>
+      <div class="contact-links">
+        <a href="tel:+16609737564">660-973-7564</a>
+        <a href="mailto:admin@hotrodzoutdoors.com">admin@hotrodzoutdoors.com</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
